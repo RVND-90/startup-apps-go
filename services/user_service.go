@@ -1,6 +1,7 @@
 package services
 
 import (
+	"github.com/RVND-90/startup-apps-go/constants"
 	"github.com/RVND-90/startup-apps-go/interfaces"
 	"github.com/RVND-90/startup-apps-go/models/dto"
 )
@@ -25,8 +26,7 @@ func (s *UserService) Add(create dto.CreateUserDto) *dto.ResponseDto {
 		Data: &dto.CreateSuccessResponse{
 			Id: 1,
 		},
-		HttpResponseCode: 200,
-		Code: "00",
-		Message: "success",
+		RC: constants.GetRC(constants.SUCCESS_CODE),
+		
 	}
 }
